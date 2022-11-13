@@ -1,0 +1,29 @@
+composer require slim/slim:"4.*"
+composer require slim/psr7
+composer require firebase/php-jwt
+
+
+configurar vhost:
+
+1)apache-> config -> httpd.conf -> buscar Directory -> AllowOverride all
+
+2)apache-> config -> browse apache -> conf -> extra -> vhost.conf
+
+<VirtualHost *:80>
+    ServerAdmin administrador@gmail.com
+    DocumentRoot "D:/xampp/htdocs/nombre_virtual_host/public"
+    ServerName nombre_virtual_host
+    ErrorLog "logs/nombre_virtual_host.log"
+    CustomLog "logs/nombre_virtual_host.log" common
+</VirtualHost>
+
+3) C:\Windows\System32\drivers\etc -> host -> agregar nuestro host 127.0.0.1 nombre_virtual_host
+
+4) Agregar .htaccess e index.php en public
+
+.htaccess:
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
