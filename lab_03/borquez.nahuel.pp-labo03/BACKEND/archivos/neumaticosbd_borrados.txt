@@ -1,0 +1,3 @@
+{"marca":"FateO","medidas":"195-75-R14","precio":19800,"id":2,"pathFoto":".\/neumaticosBorrados\/2.FateO.borrado.035108."},
+{"marca":"michelin_mod","medidas":"666-44-44","precio":66999,"id":11,"pathFoto":".\/neumaticosBorrados\/11.michelin_mod.borrado.035315.png"},
+{"marca":"rober_modif","medidas":"666-66-66","precio":66000,"id":13,"pathFoto":".\/neumaticosBorrados\/13.rober_modif.borrado.035642.png"},
