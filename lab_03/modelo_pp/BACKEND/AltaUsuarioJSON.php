@@ -13,7 +13,8 @@ $usuario->nombre = $nombre;
 $usuario->clave = $clave;
 $usuario->correo = $correo;
 
-var_dump($usuario->GuardarEnArchivo());
+//var_dump($usuario->GuardarEnArchivo());
+echo $usuario->GuardarEnArchivo()
 
 
 ?>

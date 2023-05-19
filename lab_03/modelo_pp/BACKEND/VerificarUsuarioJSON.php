@@ -10,16 +10,18 @@ $obj = new stdClass();
 if(Usuario::TraerUno($params) != NULL)
 {
     $obj->exito = true;
-    $obj->mensaje = "Usuario Existente";
+    $obj->mensaje = "Usuario Encontrado!";
 
-    var_dump(json_encode($obj));
+    //var_dump(json_encode($obj));
+    echo json_encode($obj);
 }
 else
 {
     $obj->exito = false;
-    $obj->mensaje = "Usuario NO Encontrado";
+    $obj->mensaje = "Usuario NO Encontrado!";
     
-    var_dump(json_encode($obj));
+    //var_dump(json_encode($obj));
+    echo json_encode($obj);
 }
 
 

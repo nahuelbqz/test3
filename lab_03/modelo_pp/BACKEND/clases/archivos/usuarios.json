@@ -1,3 +1,6 @@
 [{"nombre":"pedro","correo":"pedro@mail.com","clave":"123"},
 {"nombre":"mario","correo":"mario@mail.com","clave":"124"},
-{"nombre":"asd","correo":"asd","clave":"123"}]
+{"nombre":"asd","correo":"asd","clave":"123"},
+{"nombre":"manuel","correo":"manu@gmail.com","clave":"2222"},
+{"nombre":"manu","correo":"manuel@gmail.com","clave":"2222"},
+{"nombre":"camila","correo":"camila@gmail.com","clave":"111"}]

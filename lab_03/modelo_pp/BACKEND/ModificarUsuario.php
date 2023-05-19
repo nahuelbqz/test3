@@ -21,14 +21,16 @@ if($usuario->Modificar())
     $obj->exito = true;
     $obj->mensaje = "Usuario Modificado correctamente";
 
-    var_dump(json_encode($obj));
+    //var_dump(json_encode($obj));
+    echo json_encode($obj);
 }
 else
 {
     $obj->exito = false;
     $obj->mensaje = "ERROR en la MODIFICACION!!";
 
-    var_dump(json_encode($obj));
+    //var_dump(json_encode($obj));
+    echo json_encode($obj);
 }
 
 //var_dump(json_encode($obj));

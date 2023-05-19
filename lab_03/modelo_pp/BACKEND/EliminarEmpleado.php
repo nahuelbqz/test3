@@ -10,13 +10,15 @@ if(Empleado::EliminarF($id))
 {
     $obj->exito = true;
     $obj->mensaje = "Empleado ELIMINADO correctamente.";
-    var_dump(json_encode($obj));
+    //var_dump(json_encode($obj));
+    echo json_encode($obj);
 }
 else
 {
     $obj->exito = false;
     $obj->mensaje = "ERROR AL ELIMINAR empleado!!";
-    var_dump(json_encode($obj));
+    //var_dump(json_encode($obj));
+    echo json_encode($obj);
 }
 
 ?>

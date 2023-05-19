@@ -64,13 +64,13 @@ class Usuario
         if($cant>0)
         {
             $respuesta->exito = TRUE;
-            $respuesta->mensaje = "Se a Guardado Correctamente";
+            $respuesta->mensaje = "Se Guardo Correctamente";
             //array_push($retorno,$exito);
         }
         else
         {
             $respuesta->exito=false;
-            $respuesta->mensaje="NO se a Guardado Correctamente";
+            $respuesta->mensaje="NO se pudo Guardar Correctamente";
             //array_push($retorno,$exito);
             //array_push($retorno,$mensaje);
         }

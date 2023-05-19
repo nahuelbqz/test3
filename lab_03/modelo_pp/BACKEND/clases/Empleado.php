@@ -72,6 +72,10 @@ class Empleado extends Usuario implements ICRUD
         $this->foto = $pathFoto;
         move_uploaded_file($_FILES["foto"]["tmp_name"], $pathFoto);
 
+        //path para la db, asi carga la foto desde empleado.html
+        $pathFoto = "./backend/empleados/fotos/".$this->nombre.".".$this->id_perfil.".".date("His").".".pathinfo($this->foto,PATHINFO_EXTENSION);
+        $this->foto = $pathFoto;
+
         try
         {
             $db = new PDO('mysql:host=localhost;dbname=usuarios_test;charset=utf8', $usuario, $clave);
@@ -115,6 +119,10 @@ class Empleado extends Usuario implements ICRUD
         $this->foto = $pathFoto;
         move_uploaded_file($_FILES["foto"]["tmp_name"], $pathFoto);
 
+        //path para la db, asi carga la foto desde empleado.html
+        $pathFoto = "./backend/empleados/fotos/".$this->nombre.".".$this->id_perfil.".".date("His").".".pathinfo($this->foto,PATHINFO_EXTENSION);
+        $this->foto = $pathFoto;
+        
         try
         {
             $db = new PDO('mysql:host=localhost;dbname=usuarios_test;charset=utf8', $usuario,$clave);
@@ -159,6 +167,7 @@ class Empleado extends Usuario implements ICRUD
             foreach($consulta as $obj)
             {
                 unlink($obj->foto);
+                //para que pueda eliminar le tengo que sacar del path el ./backend y dejar solo el ./empleados
             }
 
             $consulta = $db->prepare("DELETE FROM empleados WHERE id = :id");

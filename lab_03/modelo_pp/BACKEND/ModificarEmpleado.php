@@ -33,13 +33,15 @@ if($empleado->ModificarF())
 {
     $obj->exito = true;
     $obj->mensaje = "Empleado modificado correctamente.";
-    var_dump(json_encode($obj));
+    //var_dump(json_encode($obj));
+    echo json_encode($obj);
 }
 else
 {
     $obj->exito = false;
     $obj->mensaje = "ERROR en la MODIFICACION del empleado!!";
-    var_dump(json_encode($obj));
+    //var_dump(json_encode($obj));
+    echo json_encode($obj);
 }
 
 ?>

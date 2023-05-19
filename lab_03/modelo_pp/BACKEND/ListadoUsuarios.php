@@ -3,12 +3,52 @@
 require_once("./clases/Usuario.php");
 use Borquez\Usuario;
 
-if(isset($_GET["tabla"]))
-{
+//if(isset($_GET["tabla"]))
+//{
     $usuarios = Usuario::TraerTodos();
-}
+//}
+
+    //OTRA TABLA
+    $tabla = 
+    "<table>" . 
+    "<thead>";
+
+    foreach ($usuarios[0] as $key => $value) {
+        if($key != "clave") {
+            if($key != "id_perfil") {
+                $tabla .= "<th>" . $key . "</th>";
+            }
+        }
+    }
+
+    $tabla .= "<th>ACCIONES</th>";
+    $tabla .= "</thead>";
+
+    //body
+    $tabla .= "<tbody>";
+    for ($i=0; $i < count($usuarios); $i++) { 
+        $tabla .= "<tr>";//fila
+        foreach ($usuarios[$i] as $key => $value) {
+            if($key != "clave"){
+                if($key != "id_perfil") {
+                    $tabla .= "<td>" . $value . "</td>";//valor column
+                }
+            }
+        }
+        $usuario = json_encode($usuarios[$i]);
+        $tabla .= "<td><input type='button' value='Modificar' onclick='ModeloParcial.Modificar({$usuario})'></td>";
+        $tabla .= "<td><input type='button' value='Eliminar' onclick='ModeloParcial.EliminarUsuario({$usuario})'></td>";
+        $tabla .= "</tr>";
+    }
+    $tabla .= "</tbody>";
+    $tabla .= "</table>";
+
+    echo $tabla;
 
 ?>
+
+<!--
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,7 +62,7 @@ if(isset($_GET["tabla"]))
         <thead class="thead-light">
              <tr>
                 <th>ID</th>
-                <th> NOMBRE</th>
+                <th>NOMBRE</th>
                 <th>CORREO</th>
                 <th>ID PERFIL</th>
                 <th>PERFIL</th>
@@ -45,3 +85,5 @@ if(isset($_GET["tabla"]))
     
 </body>
 </html>
+
+                -->

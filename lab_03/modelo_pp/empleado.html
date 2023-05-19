@@ -13,11 +13,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
   <!-- AGREGAR ARCHIVOS JS AQUI -->
-
+  <script src="./js/manejadora.js"></script>
 
 </head>
 
-<body style="background-color:darkgrey">
+<body style="background-color:darkgrey" onload="ModeloParcial.MostrarEmpleado()">
  <br>
   <div class="container" style="background-color:lightblue">
     <br>
@@ -69,9 +69,9 @@
                   </tr>
                   <tr>
                     <td colspan="2" class="col">
-                        <input type="button" value="Mostrar" class="btn btn-info" onclick="" />
-                        <input type="button" value="Agregar" id="btn-agregar" class="btn btn-success" onclick="" />
-                        <input type="button" value="Modificar" class="btn btn-dark" onclick="" />
+                        <input type="button" value="Mostrar" class="btn btn-info" onclick="ModeloParcial.MostrarEmpleado()" />
+                        <input type="button" value="Agregar" id="btn-agregar" class="btn btn-success" onclick="ModeloParcial.AgregarEmpleado()" />
+                        <input type="button" value="Modificar" class="btn btn-dark" onclick="ModeloParcial.ModificarEmp()" />
                     </td>
                   </tr>
                 </table>

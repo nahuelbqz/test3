@@ -15,14 +15,16 @@ if(isset($_POST["accion"]))
         $obj->exito = true;
         $obj->mensaje = "Usuario ELIMINADO correctamente";
 
-        var_dump(json_encode($obj));
+        //var_dump(json_encode($obj));
+        echo json_encode($obj);
     }
     else
     {
         $obj->exito = false;
         $obj->mensaje = "ERROR AL ELIMINAR";
 
-        var_dump(json_encode($obj));
+        //var_dump(json_encode($obj));
+        echo json_encode($obj);
     }
 }
 else

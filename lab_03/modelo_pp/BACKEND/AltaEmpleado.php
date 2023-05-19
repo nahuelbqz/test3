@@ -31,6 +31,7 @@ else
     $respuesta->mensaje = "NO SE HA PODIDO AGREGAR el empleado";
 }
 
-var_dump(json_encode($respuesta));
+//var_dump(json_encode($respuesta));
+echo json_encode($respuesta);
 
 ?>
