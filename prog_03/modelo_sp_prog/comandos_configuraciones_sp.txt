@@ -2,6 +2,7 @@ composer require slim/slim:"4.*"
 composer require slim/psr7
 composer require firebase/php-jwt
 
+((SI YA TENGO EL composer.json y compose.lock solo hago -> composer install))
 
 configurar vhost:
 
