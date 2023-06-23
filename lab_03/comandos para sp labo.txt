@@ -1,0 +1,19 @@
+npm init -y
+npm install express
+npm install -g @types/node
+npm i bootstrap@5.2.2
+npm install jsonwebtoken
+npm install multer
+npm install mime-types
+npm install cors
+npm install mysql
+npm install express-myconnection
+npm install express
+npm i --save-dev @types/jquery
+
+
+si paso los package hago:
+
+tsc --init -> crea el tsconfig
+npm install -> instala todo lo de los package
+
